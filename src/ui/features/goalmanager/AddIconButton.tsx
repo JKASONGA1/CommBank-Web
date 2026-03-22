@@ -4,12 +4,8 @@ import 'date-fns'
 import React from 'react'
 import styled from 'styled-components'
 import { TransparentButton } from '../../components/TransparentButton'
-
-type Props = { hasIcon: boolean; onClick: (event: React.MouseEvent) => void }
-
+type Props = { onClick: (event: React.MouseEvent) => void }
 export default function AddIconButton(props: Props) {
-  if (props.hasIcon) return null
-
   return (
     <Container>
       <TransparentButton onClick={props.onClick}>
@@ -19,7 +15,6 @@ export default function AddIconButton(props: Props) {
     </Container>
   )
 }
-
 const Container = styled.div`
   flex-direction: row;
   align-items: flex-end;
